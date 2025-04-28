@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header">
+                Editar Registro
+            </div>
+            <div class="card-body">
+                <form action="{{url_for('personas_update')}}" method="POST">
+                    <input type="hidden" name="id" value="{{persona['id']}}">
+                    <div class="b-3">
+                        <label for="nom" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="nom" value="{{persona['nombre']}}">
+                    </div>
+                    <div class="b-3">
+                        <label for="tel" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" name="telefono" id="tel" value="{{persona['telefono']}}">
+                    </div>
+                    <div class="b-3">
+                        <label for="fn" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" name="fecha_nac" id="fn" value="{{persona['fecha_nac']}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    <div class="col-4"></div>
+</div>
+{% include 'footer.html' %}

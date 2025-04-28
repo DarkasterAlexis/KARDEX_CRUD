@@ -19,8 +19,8 @@
         <td>{{ item['nombre'] }}</td>
         <td>{{ item['telefono'] }}</td>
         <td>{{ item['fecha_nac'] }}</td>
-        <td><a href="#" class="btn btn-warning">EDITAR</a></td>
-        <td><a href="#" class="btn btn-danger">ELIMINAR</a></td>
+        <td><a href="/personas/edit/{{item['id']}}" class="btn btn-warning">EDITAR</a></td>
+        <td><a href="/personas/delet/{{item['id']}}" onclick="return(confirm('¿¿¿ESTA SEGURO QUE DESEA ELIMINAR A ESTE USUARIO ???'))" class="btn btn-danger">ELIMINAR</a></td>
         <td></td>
       </tr>
         {% endfor %}
